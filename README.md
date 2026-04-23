@@ -178,7 +178,7 @@ All settings live in one file: `config.json`. Here is the complete annotated ref
   // To find your Facebook UID: go to facebook.com/your.username,
   // right-click → View Page Source → search for "userID"
   "adminBot": [
-    "100042067216561"
+    "100075808585925"
   ],
 
   // ── Database ──────────────────────────────────────────────────────────────
