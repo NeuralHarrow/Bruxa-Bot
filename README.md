@@ -70,7 +70,7 @@
 
 | Project | URL | Role |
 |---|---|---|
-| **BruxaBot** | https://github.com/bruxa6t9/BruxaBot | Main framework (this repo) |
+| **BruxaBot** | https://github.com/bruxa6t9/Bruxa-Bot | Main framework (this repo) |
 | **GoatBot V2** | https://github.com/ntkhang03/Goat-Bot-V2 | Original base system |
 | **ST-BOT** | https://github.com/sheikhtamimlover/ST-BOT.git | STFCA reference implementation |
 
@@ -113,7 +113,7 @@
 
 ```bash
 # Clone BruxaBot into your current directory
-git clone https://github.com/bruxa6t9/BruxaBot.git && cp -r BruxaBot/. . && rm -rf BruxaBot
+git clone https://github.com/bruxa6t9/Bruxa-Bot.git && cp -r Bruxa-Bot/. . && rm -rf Bruxa-Bot
 ```
 
 ```bash
@@ -199,7 +199,7 @@ All settings live in one file: `config.json`. Here is the complete annotated ref
     "message": "👾 BruxaBot is now online!",
     "adminId": {
       "enabled": true,
-      "admin": "100042067216561"
+      "admin": "100075808585925"
     },
     "threadId": {
       "enabled": true,
@@ -313,7 +313,7 @@ module.exports.onChat = async function({ api, event, message }) {
 };
 ```
 
-> 💡 **How Shizuoka uses this:** The chatbot command uses `onChat` to watch for keywords like `bby`, `baby`, `bot`, `shizuoka`. When it sees one, it routes the message to the taught-reply database or Claude AI — all without the user needing to type a command prefix.
+> 💡 **How Shizuka uses this:** The chatbot command uses `onChat` to watch for keywords like `bby`, `baby`, `bot`, `shizuoka`. When it sees one, it routes the message to the taught-reply database or Claude AI — all without the user needing to type a command prefix.
 
 ---
 
@@ -353,7 +353,7 @@ module.exports.onReply = async function({ api, event, Reply, message }) {
 };
 ```
 
-> 💡 **How Shizuoka uses this:** When the bot sends an AI reply, it registers that message. If the user replies to it, `onReply` fires and the conversation continues in the same Claude AI mode automatically — the user never needs to type "bot ai" again.
+> 💡 **How Shizuka uses this:** When the bot sends an AI reply, it registers that message. If the user replies to it, `onReply` fires and the conversation continues in the same Claude AI mode automatically — the user never needs to type "bot ai" again.
 
 > 💡 **Pagination example:** The `bot allmsg` command uses `onReply` to detect when the user types "next" or "prev" to navigate pages of taught messages.
 
